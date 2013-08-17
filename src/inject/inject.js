@@ -3,5 +3,7 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse){
 
   var img = document.createElement('img');
   img.setAttribute('src', request.imgUrl);
-  document.body.appendChild(img);
+  img.setAttribute('class', "sticker");
+  $("body").prepend(img);
+  $(".sticker").draggable();
 });

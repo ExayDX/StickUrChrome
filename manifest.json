@@ -27,9 +27,7 @@
   },
   "content_scripts": [
     {
-      "matches": [
-        "https://www.google.com/*"
-      ],
+      "matches": ["http://*/*"],
       "css": [
         "src/inject/inject.css"
       ]
@@ -37,6 +35,8 @@
     {
       "matches": ["http://*/*"],
       "js": [
+        "js/jquery/jquery.js",
+        "js/jquery/jquery-ui.js",
         "src/inject/inject.js"
       ]
     }
