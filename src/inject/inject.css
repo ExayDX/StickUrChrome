@@ -1,5 +1,5 @@
 .sticker {
   position: absolute;
   cursor: pointer;
-
+  z-index: 1000;
 }

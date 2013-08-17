@@ -2,7 +2,7 @@
 <style type="text/css">
 	#mainPopup {
 		padding: 10px;
-		height: 200px;
+		height: 300px;
 		width: 400px;
 		font-family: Helvetica, Ubuntu, Arial, sans-serif;
 	}
@@ -13,11 +13,15 @@
   img {
     cursor: pointer;
   }
+
+  textarea { width: 90%; }
 </style>
 
 <script src="browser_action.js"></script>
 
 <div id="mainPopup">
+<h1>Text</h1>
+<textarea id="sticker_text"></textarea>
 <h1>Stickers</h1>
 <img src="../../img/stickers/github.png" />
 <img src="../../img/stickers/speachR.png" />

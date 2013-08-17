@@ -29,7 +29,8 @@
     {
       "matches": ["http://*/*"],
       "css": [
-        "src/inject/inject.css"
+        "src/inject/inject.css",
+        "src/inject/jquery-ui.css"
       ]
     },
     {
