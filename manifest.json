@@ -10,6 +10,8 @@
     "128": "icons/icon128.png"
   },
   "permissions": ["activeTab"],
+  "web_accessible_resources": ["img/stickers/github.png",
+    "img/stickers/speachL.png","img/stickers/speachR.png","img/stickers/cat.png","img/stickers/flower.png"],
   "default_locale": "en",
   "background": {
     "scripts": [
@@ -33,9 +35,7 @@
       ]
     },
     {
-      "matches": [
-        "https://www.google.com/*"
-      ],
+      "matches": ["http://*/*"],
       "js": [
         "src/inject/inject.js"
       ]
