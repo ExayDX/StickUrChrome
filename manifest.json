@@ -11,7 +11,11 @@
   },
   "permissions": ["activeTab", "storage"],
   "web_accessible_resources": ["img/stickers/github.png",
-    "img/stickers/speachL.png","img/stickers/speachR.png","img/stickers/cat.png","img/stickers/flower.png"],
+                               "img/stickers/speachL.png",
+                               "img/stickers/speachR.png",
+                               "img/stickers/cat.png",
+                               "img/stickers/flower.png", 
+                               "img/stickers/bang.png"],
   "default_locale": "en",
   "background": {
     "scripts": [
