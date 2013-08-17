@@ -2,16 +2,6 @@
 var gstickers = new Array();
 
 /**
- * Sauvegarde la position d'un sicker
- */
-function save_position(e) {
-  var i = $(e.target).data('stickid');
-  gstickers[i].x = e.pageX - e.offsetX;
-  gstickers[i].y = e.pageY - e.offsetY;
-  chrome.storage.sync.set({'stickers': gstickers});
-}
-
-/**
  * Reçoit un message du browser action comme quoi un nouveau sticker
  * a été ajouté
  */
@@ -36,6 +26,16 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse){
     containment: "body"
   });
 });
+
+/**
+ * Sauvegarde la position d'un sicker
+ */
+function save_position(e) {
+  var i = $(e.target).data('stickid');
+  gstickers[i].x = e.pageX - e.offsetX;
+  gstickers[i].y = e.pageY - e.offsetY;
+  chrome.storage.sync.set({'stickers': gstickers});
+}
 
 function save_sticker(sticker) {
   gstickers.push(sticker);
@@ -72,7 +72,7 @@ $(document).ready(function(){
   // chrome.storage.sync.remove('stickers');
 
   // Récupératio des stickers dans le localstorage
-  chrome.storage.sync.get('stickers', function(obj){;
+  chrome.storage.sync.get('stickers', function(obj){
 
     // On traite seulement s'il y a des stickers de sauvegardé
     if (!jQuery.isEmptyObject(obj)) {
@@ -96,3 +96,4 @@ $(document).ready(function(){
     });
   });
 });
+
