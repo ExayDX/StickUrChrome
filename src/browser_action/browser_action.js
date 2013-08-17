@@ -1,12 +1,12 @@
 function click(e) {
- chrome.tabs.executeScript(null,
-     {code:"document.body.style.backgroundColor='red'"});
- window.close();
+  console.log("adding a sticker");
+  chrome.tabs.executeScript(null, {code:"document.body.style.background='red'"});
+  window.close();
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  var divs = document.querySelectorAll('img');
-  for (var i = 0; i < divs.length; i++) {
-    divs[i].addEventListener('click', click);
+  var imgs = document.querySelectorAll('img');
+  for (var i = 0; i < imgs.length; i++) {
+    imgs[i].addEventListener('click', click);
   }
 });
